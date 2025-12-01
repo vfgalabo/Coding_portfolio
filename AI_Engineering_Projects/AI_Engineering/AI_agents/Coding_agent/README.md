@@ -39,13 +39,13 @@ This project is a Streamlit application that showcases an AI agent capable of ex
 This screenshot shows the agent answering a question about the current population of Tokyo. The agent intelligently recognized that it needed to use its **Tavily Search tool** to get up-to-date information from the web.
 
 
-![An image of the Agentic AI app in action.](https://raw.githubusercontent.com/vfgalabo/Coding_portfolio/master/AI_Engineering_Projects/AI_Engineering/AI_agents/Coding_agent/assets/agent_1.png)
+![An image of the Agentic AI app in action.](https://raw.githubusercontent.com/vfgalabo/Coding_portfolio/main/AI_Engineering_Projects/AI_Engineering/AI_agents/Coding_agent/assets/agent_1.png)
 
 ### The Agent's Response
 
 This screenshot shows the agent solving a mathematical query by generating and executing Python code. The agent used its **Python REPL tool** to perform the vector dot product calculation.
 
-![A close-up image of the agent's structured response.](https://raw.githubusercontent.com/vfgalabo/Coding_portfolio/master/AI_Engineering_Projects/AI_Engineering/AI_agents/Coding_agent/assets/agent_2.png)
+![A close-up image of the agent's structured response.](https://raw.githubusercontent.com/vfgalabo/Coding_portfolio/main/AI_Engineering_Projects/AI_Engineering/AI_agents/Coding_agent/assets/agent_2.png)
 
 ## 📦 Dependencies
 
