@@ -1,0 +1,9 @@
+[server]
+port = 8501                 # The default port; useful to specify if you need a different one
+runOnSave = true            # Automatically rerun the script when changes are saved
+
+[browser]
+gatherUsageStats = false    # Optional: disables sending usage stats to Streamlit
+
+[global]
+disableWatchdog = true      # Useful for network file systems

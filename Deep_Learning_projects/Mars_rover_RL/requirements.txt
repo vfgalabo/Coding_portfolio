@@ -1,0 +1,2 @@
+# Numerical Computing Library (Essential for Q-Table and Map generation)
+numpy

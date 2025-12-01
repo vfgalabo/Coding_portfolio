@@ -1,0 +1,39 @@
+# --------------------
+# Python Specific Files
+# --------------------
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+venv/
+.venv/
+build/
+dist/
+*.pdf
+# --------------------
+# API Keys and Secrets
+# --------------------
+# IMPORTANT: This prevents the API keys from being uploaded to GitHub
+**/secrets.toml 
+
+# --------------------
+# Streamlit & IDE Files
+# --------------------
+# Ignore temporary Streamlit files
+.streamlit/log.txt
+.streamlit/cache/
+
+# Ignore VS Code files
+.vscode/
+
+# Ignore Jupyter/IPython Notebook Files 
+.ipynb_checkpoints
+
+# --- PyTorch CNN Project Exclusions (Relative to Portfolio_main) ---
+
+# 1. Exclude the folder where CIFAR-10 data is downloaded
+Deep_learning_projects/CNN_pytorch/data/
+
+# 2. Exclude any potential model save files within that project folder
+Deep_learning_projects/CNN_pytorch/*.pth
+Deep_learning_projects/CNN_pytorch/*.pt
