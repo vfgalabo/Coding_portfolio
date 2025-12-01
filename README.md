@@ -1,3 +1,41 @@
+# AI, Data Engineering, and Scientific Computing Portfolio
+
+This repository showcases a range of projects across **Deep Learning (PyTorch)**, **Conversational AI**, and **Scalable Data Engineering (ETL)**. The projects demonstrate expertise in full-stack implementation, from raw data acquisition to final model validation.
+
+---
+
+## 🎯 Technical Skillset
+
+| Category | Primary Technologies/Concepts | Projects Demonstrated |
+| :--- | :--- | :--- |
+| **Deep Learning (DL)** | **PyTorch**, CNNs, Transfer Learning, Validation Strategies, GPU Migration. | CIFAR-10 Classifier, Zoobot/PyTorch (Future) |
+| **Conversational AI** | LLMs, RAG, Tool Use, **Secure Sandboxing**, Streamlit, Modular Architecture. | RAG Agent (PDF Summarizer), Coding Tool Agent |
+| **Data Engineering (ETL)** | **Pandas**, **Selenium**, API Interception, Multi-Stage Pipelines, Data Consolidation. | Shanghai Ranking ETL Project |
+| **Algorithms** | **Q-Learning**, Reinforcement Learning (RL), Custom Environment Design, Exploration/Exploitation. | Mars Rover RL Agent |
+| **Scientific Computing** | **CPNest** Algorithm, MCMC Sampling, Parameter Estimation, Observational Data Analysis. | CPNest Algorithm, Obs. Cosmology |
+---
+
+## 📂 Featured Projects
+
+### 1. Deep Learning: Image Classification (PyTorch CNN)
+**Description:** A complete PyTorch pipeline for image classification built on the CIFAR-10 dataset. The project demonstrates core CNN architecture, rigorous **train/validation splitting**, and advanced metrics like per-class accuracy to analyze model performance.
+
+### 2. Conversational AI: Secure Tool Agents
+**Description:** A pair of Streamlit applications featuring Large Language Models (LLMs) used for: 1) Document summarization via Retrieval-Augmented Generation (RAG), and 2) **Securely executing code** to handle complex computational queries within a restricted sandbox environment.
+
+### 3. Data Engineering: Hierarchical ETL Pipeline
+**Description:** A high-complexity ETL project that scrapes dynamic university ranking data from the ShanghaiRanking website. The pipeline is architected for **scalability**, using a **two-stage Pandas consolidation process** to synthesize hundreds of files and inject hierarchical metadata.
+
+### 4. THE Rankings Scraper (API Interception): 
+**Description:** A highly efficient scraper that bypasses traditional, slow browser rendering by using API interception to directly extract pre-rendered JSON data. This showcases the ability to optimize acquisition pipelines for maximum speed and stability.
+
+### 5. Specialized Algorithms: Mars Rover RL Agent
+**Description:** An implementation of the **Q-Learning** algorithm to train an agent to navigate a custom 2D grid-world. The project focuses on defining the state/action space and managing the exploration-exploitation trade-off to find the optimal policy.
+
+### 6. Scientific Computing & Parameter Estimation
+**Description:** Implementation and application of advanced statistical inference techniques, including the use of the **CPNest algorithm** (a nested sampling framework) for **high-dimensional parameter estimation** applied to complex data derived from **Observational Cosmology**.
+
+
 ## 🤝 Project Co-Development Acknowledgment
 
 This portfolio utilized **Gemini 2.5 Flash** (a generative AI model by Google) as a dedicated **Co-Pilot and Technical Consultant** across multiple projects.
