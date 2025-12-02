@@ -3,7 +3,17 @@
 [![Python Version](https://img.shields.io/badge/Python-3.7-blue?style=flat-square&logo=python)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](../../LICENSE) ## Description
 
-This project applies advanced Bayesian inference techniques to estimate key cosmological parameters from observational data (Supernovae data from`supernovae_data.dat`). It utilises the `cpnest` library, a powerful and efficient Python package for nested sampling, to perform robust parameter estimation and quantify uncertainties across different cosmological models (Flat, Closed, and Open Universes).
+## Project Goal
+This project applies advanced statistical inference techniques to estimate key **cosmological parameters** ($\Omega_{\Lambda}, \Omega_{M}$) that govern the expansion and destiny of the Universe. It uses observational data from **Type Ia Supernovae (SN Ia)** surveys (specifically, data derived from Perlmutter et al. 1999, [1]) to test and quantify uncertainties across different cosmological models (Flat, Closed, and Open Universes).
+
+## Core Methodology: Nested Sampling
+
+The analysis utilizes the **`cpnest` library**, a powerful and efficient Python package implementing the **Nested Sampling** algorithm.
+
+The current report uses **Supernovae Ia (SN Ia) data** presented in **Perlmutter et al. 1999, "Measurements of Omega and Lambda from 42 High-Redshift Supernovae"** (Reference: [1]) to estimate the cosmological parameters, $\Omega_{\Lambda}$ and $\Omega_{M}$. This advanced Bayesian technique is superior to traditional Markov Chain Monte Carlo (MCMC) methods for complex, high-dimensional likelihood spaces, enabling:
+
+* **Robust Parameter Estimation:** Accurately calculating the probability distributions (posteriors) for parameters like the dark energy density, $\Omega_{\Lambda}$.
+* **Bayesian Model Comparison:** Computing the **Bayesian evidence** (or model likelihood), which is essential for comparing the fit of competing cosmological models.
 
 ## Project Structure
 ```
@@ -23,6 +33,24 @@ This project applies advanced Bayesian inference techniques to estimate key cosm
 └── requirements.txt        <- Python dependencies specific to this project
 ```
 
+## Data Analysis Workflow
+
+This section outlines the logical steps the Python scripts execute to go from raw observational data to final cosmological parameter posteriors.
+
+### 1. Likelihood Definition
+A **log-likelihood function** is defined to quantify the **goodness-of-fit**. This calculation compares the **observed distance modulus** data ($\mu$, stored in `self._data`) against the theoretical **distance modulus** predicted by the `CosmologyModel` function (`self._model`), weighted by the observed uncertainty ($\sigma$). This is the core step that constrains the cosmological parameters ($\Omega_{\Lambda}, \Omega_{M}$).
+
+### 2. Model Definition
+The project defines and tests three distinct cosmological models, each with a specific constraint on the density parameters ($\Omega_{M}$ and $\Omega_{\Lambda}$):
+* **Flat Universe:** $\Omega_{M} + \Omega_{\Lambda} = 1$
+* **Closed Universe:** $\Omega_{M} + \Omega_{\Lambda} > 1$
+* **Open Universe:** $\Omega_{M} + \Omega_{\Lambda} < 1$
+
+### 3. Nested Sampling Execution
+The dedicated Python scripts (`ObsCosNest_*.py`) invoke the `cpnest` sampler, defining the parameter priors and the complex **log-likelihood function** (which quantifies the goodness-of-fit). The sampler runs iteratively, exploring the high-dimensional parameter space to generate thousands of weighted samples.
+
+### 4. Results Generation and Visualization
+The final samples are saved to the respective `Run_files_*` directories. Separate scripts (`Cornerplot_*.py`) then process these samples to generate **corner plots**  which graphically display the marginalized 1D and 2D posterior probability distributions, including the final **confidence intervals** for the estimated parameters.
 
 ## Features / Highlights
 
@@ -146,3 +174,8 @@ The CPNest routine successfully validates that **the cosmological parameters are
 ## Author
 
 [Vanya Fernandez Galabo]
+
+## References
+
+[1] Perlmutter et al. 1999, “Measurements of Omega and Lambda from 42 High-Redshift Supernovae”
+arXiv:astro-ph/9812133

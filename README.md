@@ -33,8 +33,7 @@ This repository showcases a range of projects across **Deep Learning (PyTorch)**
 **Description:** An implementation of the **Q-Learning** algorithm to train an agent to navigate a custom 2D grid-world. The project focuses on defining the state/action space and managing the exploration-exploitation trade-off to find the optimal policy.
 
 ### 6. Scientific Computing & Parameter Estimation
-**Description:** Implementation and application of advanced statistical inference techniques, including the use of the **CPNest algorithm** (a nested sampling framework) for **high-dimensional parameter estimation** applied to complex data derived from **Observational Cosmology**.
-
+**Description:** A project focused on advanced statistical inference using Type Ia Supernovae (SN Ia) data from the **Supernova Cosmology Project** (Perlmutter et al. 1999). The workflow involves detailed astronomical preprocessing—including **host galaxy light subtraction** and **K-correction** to fit the SN light curves—to yield the **peak apparent magnitude** and **stretch factor ($s$)**. The core statistical task involves applying the **CPNest nested sampling algorithm** for **high-dimensional parameter estimation** of key cosmological parameters ($\Omega_{\Lambda}, \Omega_{M}$) from the resulting Hubble diagram.
 
 ## 🤝 Project Co-Development Acknowledgment
 
