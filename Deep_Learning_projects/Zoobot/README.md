@@ -67,3 +67,25 @@ The Residual Distribution by True Galaxy Class plot (residual_distribution.png) 
 
 ## References
 [1] Walmsley, M., Lintott, C., Géron, T., Kruk, S., Krawczyk, C., Willett, K. W., Bamford, S., Kelvin, L. S., Fortson, L., Gal, Y., Keel, W., Masters, K. L., Mehta, V., Simmons, B. D., Smethurst, R., Smith, L., Baeten, E. M., & Macmillan, C. (2022). Galaxy Zoo DECaLS: Detailed visual morphology measurements from volunteers and deep learning for 314 000 galaxies. *Monthly Notices of the Royal Astronomical Society*, *509*(3), 3966–3985. https://ui.adsabs.harvard.edu/abs/2022MNRAS.509.3966W/abstract
+
+
+## Acknowledgements and Codebase
+
+This project is built upon the robust **Zoobot** framework, developed for galaxy morphology classification. I am grateful to the authors for making the codebase and pre-trained models publicly available.
+
+### 1. Zoobot Framework and Repository
+
+* **Repository:** The core architecture and pre-trained weights (ConvNeXt Nano backbone) were sourced from the official Zoobot repository.
+* **Link:** [https://github.com/mwalmsley/zoobot](https://github.com/mwalmsley/zoobot)
+
+### 2. Implementation Inspiration
+
+This project's methodology, particularly the setup for end-to-end fine-tuning and the use of the `CatalogDataModule`, was inspired by the following tutorial notebook:
+
+* **Inspiration Source:** A Google Colab notebook demonstrating Zoobot fine-tuning for regression
+* **Link:** [https://colab.research.google.com/drive/1A_-M3Sz5maQmyfW2A7rEu-g_Zi0RMGz5?usp=sharing](https://colab.research.google.com/drive/1A_-M3Sz5maQmyfW2A7rEu-g_Zi0RMGz5?usp=sharing)
+
+> **Note on Adaptation:** While the inspiration notebook performed a **regression** task (predicting continuous properties), this project adapted the method to perform **classification** (predicting discrete morphological classes).
+
+## Author
+[Vanya Fernandez Galabo]
