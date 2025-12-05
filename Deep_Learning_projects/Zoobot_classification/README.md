@@ -30,7 +30,7 @@ The process involved two key steps, demonstrating an understanding of model adap
 
 | Metric | Result | Analytical Insight |
 | :--- | :--- | :--- |
-| **Overall Accuracy** | **$88.85%$** | Achieved a highly robust result, confirming successful transfer learning. |
+| **Overall Accuracy** | `88.85%` | Achieved a highly robust result, confirming successful transfer learning. |
 | **Training Time** | **$< 30 \text{ minutes}$** (GPU) | Validated the necessity of GPU acceleration for practical deep learning research (reducing the task from an estimated $\approx 36$ hours on CPU). |
 | **Total Parameters** | **$\approx 15.0 \text{ Million}$** | Confirmed the model was fully trained (fine-tuned) end-to-end. |
 
