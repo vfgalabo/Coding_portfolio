@@ -38,9 +38,9 @@ This repository showcases a range of projects across **Deep Learning (PyTorch)**
 ### 7. Deep Learning: Advanced Transfer Learning (Zoobot)
 **Description:** A pipeline demonstrating the effective use of transfer learning by fine-tuning the Zoobot **ConvNeXt** model on the GalaxyMNIST dataset. The project validated the critical need for GPU acceleration and achieved $\mathbf{88.85\%}$ classification accuracy, with systematic error analysis revealing structural ambiguities between 'smooth_cigar' and 'edge_on_disk' galaxy classes.
 
-## 🤝 Project Co-Development Acknowledgment
+## 🤝 AI Assistance Acknowledgement
 
-This portfolio was developed by [Vanya Fernandez Galabo] and utilized **Gemini 2.5 Flash** (a generative AI model by Google) as a dedicated **Co-Pilot and Technical Consultant** across multiple projects.
+This portfolio was developed by [Vanya Fernandez Galabo] and utilized **Gemini 2.5 Flash** (a generative AI model by Google) as a dedicated **Co-Pilot** across multiple projects.
 
 Gemini's assistance was instrumental in accelerating the most specialized and architecturally complex phases of development, including:
 
