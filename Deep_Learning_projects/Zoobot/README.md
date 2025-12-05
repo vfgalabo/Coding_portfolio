@@ -19,7 +19,7 @@ The analysis confirms **high accuracy** and provides deep insight into model cer
 
 The process involved two key steps, demonstrating an understanding of model adaptation:
 
-1.  The massive pre-trained **encoder (backbone)** was loaded with weights learned from millions of galaxies.
+1.  The pre-trained **encoder (backbone)** was loaded with weights learned from millions of galaxies.
 2.  The original output layer was replaced with a **new head layer** specifically sized for the **4** distinct classes (`num_classes=4`), which was trained along with the backbone using a very low learning rate ($\mathbf{10^{-5}}$).
 
 ---
@@ -38,8 +38,7 @@ The process involved two key steps, demonstrating an understanding of model adap
 
 The Confusion Matrix (see `zoobot.png`) revealed a **systematic pattern of confusion**, which is typical in early-stage galaxy classification due to structural ambiguities:
 
-* **Highest Error Rate:** The largest single systematic confusion occurred between the **`smooth_cigar`** and **`edge_on_disk`** classes.
-* **Cause:** This error is likely due to **structural ambiguity**, where the model struggles to differentiate between a non-edge-on, elongated smooth galaxy (`smooth_cigar`) and an edge-on view of another smooth galaxy (`edge_on_disk`). This suggests a reliance on orientation cues.
+* The confusion is overwhelmingly one-sided in this specific run: the model is much more likely to confuse a **`smooth_cigar`** with an **`edge_on_disk`** (150 times) than the reverse (18 times). This confirms the systematic pattern of confusion: The model struggles to separate these two elongated categories, with a clear bias toward predicting the simpler, more common geometry (edge_on_disk) when presented with an ambiguous smooth_cigar.
 
 
 ### 3. Model Confidence Profile
@@ -47,7 +46,7 @@ The Confusion Matrix (see `zoobot.png`) revealed a **systematic pattern of confu
 The Residual Distribution by True Galaxy Class plot (residual_distribution.png) demonstrated the model's reliability:
 
 * The residual histograms for highly successful classes (**`smooth_round`**) are heavily peaked near **$0.0$ (zero error)**, meaning the model is highly certain of its correct predictions.
-* The residual distribution for the weakest class, **`smooth_cigar`** (highlighted in the Per-Class Accuracy chart), is noticeably **flatter** and spread out towards **$1.0$**. This confirms that the model's **uncertainty** is directly correlated with its misclassification errors.
+* The residual distribution for the weakest class, **`smooth_cigar`** (highlighted in the Per-Class Accuracy chart: per_class_accuracy.png), is noticeably **flatter** and spread out towards **$1.0$**. This confirms that the model's **uncertainty** is directly correlated with its misclassification errors.
 
 ---
 
@@ -60,10 +59,10 @@ The Residual Distribution by True Galaxy Class plot (residual_distribution.png) 
 
 ### Execution Steps
 
-1.  **Run Cell 1 (Installs & Path Fixes):** Installs `Zoobot` and `galaxy-datasets`, and runs the necessary `sys.path.append` commands to enable successful imports in the Colab environment.
-2.  **Run Cell 2 (Data Setup):** Downloads the data and initializes the `CatalogDataModule`.
-3.  **Run Cell 3 (Training):** Defines the `FinetuneableZoobotClassifier` and runs the **30-epoch** GPU fine-tuning process.
-4.  **Run Final Cells:** Executes the `predict_on_catalog` utility and generates all analytical plots (Confusion Matrix, Per-Class Accuracy, and Residual Distribution).
+1.  **Run "Install Zoobot" cells:** Installs `Zoobot` and `galaxy-datasets`, and runs the necessary `sys.path.append` commands to enable successful imports in the Colab environment.
+2.  **Run "Download Catalogs of Images and Labels" cells:** Downloads the data and initializes the `CatalogDataModule`.
+3.  **Run "Download Pretrained Model" and "Finetuning Zoobot" cells:** Defines the `FinetuneableZoobotClassifier` and runs the **30-epoch** GPU fine-tuning process.
+4.  **Run "Prediction" and "Model Performance Analysis" cells:** Executes the `predict_on_catalog` utility and generates all analytical plots (Confusion Matrix, Per-Class Accuracy, and Residual Distribution).
 
 ## References
 [1] Walmsley, M., Lintott, C., Géron, T., Kruk, S., Krawczyk, C., Willett, K. W., Bamford, S., Kelvin, L. S., Fortson, L., Gal, Y., Keel, W., Masters, K. L., Mehta, V., Simmons, B. D., Smethurst, R., Smith, L., Baeten, E. M., & Macmillan, C. (2022). Galaxy Zoo DECaLS: Detailed visual morphology measurements from volunteers and deep learning for 314 000 galaxies. *Monthly Notices of the Royal Astronomical Society*, *509*(3), 3966–3985. https://ui.adsabs.harvard.edu/abs/2022MNRAS.509.3966W/abstract
@@ -85,7 +84,8 @@ This project's methodology, particularly the setup for end-to-end fine-tuning an
 * **Inspiration Source:** A Google Colab notebook demonstrating Zoobot fine-tuning for regression
 * **Link:** [https://colab.research.google.com/drive/1A_-M3Sz5maQmyfW2A7rEu-g_Zi0RMGz5?usp=sharing](https://colab.research.google.com/drive/1A_-M3Sz5maQmyfW2A7rEu-g_Zi0RMGz5?usp=sharing)
 
-> **Note on Adaptation:** While the inspiration notebook performed a **regression** task (predicting continuous properties), this project adapted the method to perform **classification** (predicting discrete morphological classes).
+**Note on Adaptation:** While the inspiration notebook performed a **regression** task (predicting continuous properties), this project adapted the method to perform **classification** (predicting discrete morphological classes).
 
 ## Author
+
 [Vanya Fernandez Galabo]
