@@ -72,7 +72,7 @@ To bypass rendering errors on GitHub, the executable output cells (including tra
 The key **visualizations** are saved as static image files in the main project folder (Zoobot_classification):
 
 * [Confusion Matrix](confusion_matrix.png)
-* [Per-Class Accuracy Chart](per_class_accuracy.png)
+* [Per-Class Accuracy Chart](per-class_accuracy.png)
 * [Confidence Distribution Plot](confidence_distribution.png)
 * [Top 5 Predictions Visualization](top_5_predictions.png) 
 * [Top 5 Errors Visualization](top_5_errors.png) 

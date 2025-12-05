@@ -63,3 +63,8 @@ Gemini's assistance was instrumental in accelerating the most specialized and ar
 
 
 The repository owner maintained full control over **final code implementation, hyperparameter tuning, validation, and architectural decisions** across all projects.
+
+## Licensing
+
+All projects within this repository are covered under the **[MIT License](LICENSE)** unless a specific sub-project directory contains its own `LICENSE` file.
+
