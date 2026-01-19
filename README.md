@@ -1,6 +1,6 @@
-# AI, Data Engineering, and Scientific Computing Portfolio
+# AI, and Scientific Computing Portfolio
 
-This repository showcases a range of projects across **Deep Learning (PyTorch)**, **Conversational AI**, and **Scalable Data Engineering (ETL)**. The projects demonstrate expertise in full-stack implementation, from raw data acquisition to final model validation.
+This repository showcases a range of projects across **Deep Learning**,  **Agentic AI** and **Scientific Computing**.
 
 ---
 
@@ -10,7 +10,6 @@ This repository showcases a range of projects across **Deep Learning (PyTorch)**
 | :--- | :--- | :--- |
 | **Deep Learning (DL)** | **PyTorch**, CNNs, Transfer Learning, Validation Strategies, GPU Migration. | CIFAR-10 Classifier, Zoobot Finetuning for galaxy classification|
 | **Conversational AI** | LLMs, RAG, Tool Use, **Secure Sandboxing**, Streamlit, Modular Architecture. | RAG Agent (PDF Summarizer), Coding Tool Agent |
-| **Data Engineering (ETL)** | **Pandas**, **Selenium**, API Interception, Multi-Stage Pipelines, Data Consolidation. | Shanghai Ranking ETL Project |
 | **Algorithms** | **Q-Learning**, Reinforcement Learning (RL), Custom Environment Design, Exploration/Exploitation. | Mars Rover RL Agent |
 | **Scientific Computing** | **CPNest** Algorithm, MCMC Sampling, Parameter Estimation, Observational Data Analysis. | CPNest Algorithm, Obs. Cosmology |
 ---
@@ -23,19 +22,13 @@ This repository showcases a range of projects across **Deep Learning (PyTorch)**
 ### 2. Conversational AI: Secure Tool Agents
 **Description:** A pair of Streamlit applications featuring Large Language Models (LLMs) used for: 1) Document summarization via Retrieval-Augmented Generation (RAG), and 2) **Securely executing code** to handle complex computational queries within a restricted sandbox environment.
 
-### 3. Data Engineering: Hierarchical ETL Pipeline
-**Description:** A high-complexity ETL project that scrapes dynamic university ranking data from the ShanghaiRanking website. The pipeline is architected for **scalability**, using a **two-stage Pandas consolidation process** to synthesize hundreds of files and inject hierarchical metadata.
-
-### 4. THE Rankings Scraper (API Interception): 
-**Description:** A highly efficient scraper that bypasses traditional, slow browser rendering by using API interception to directly extract pre-rendered JSON data. This showcases the ability to optimize acquisition pipelines for maximum speed and stability.
-
-### 5. Specialized Algorithms: Mars Rover RL Agent
+### 3. Specialized Algorithms: Mars Rover RL Agent
 **Description:** An implementation of the **Q-Learning** algorithm to train an agent to navigate a custom 2D grid-world. The project focuses on defining the state/action space and managing the exploration-exploitation trade-off to find the optimal policy.
 
-### 6. Scientific Computing & Parameter Estimation
+### 4. Scientific Computing & Parameter Estimation
 **Description:** A project focused on advanced statistical inference using Type Ia Supernovae (SN Ia) data from the **Supernova Cosmology Project** (Perlmutter et al. 1999). The workflow involves detailed astronomical preprocessing—including **host galaxy light subtraction** and **K-correction** to fit the SN light curves—to yield the **peak apparent magnitude** and **stretch factor ($s$)**. The core statistical task involves applying the **CPNest nested sampling algorithm** for **high-dimensional parameter estimation** of key cosmological parameters ($\Omega_{\Lambda}, \Omega_{M}$) from the resulting Hubble diagram.
 
-### 7. Deep Learning: Advanced Transfer Learning (Zoobot)
+### 5. Deep Learning: Advanced Transfer Learning (Zoobot)
 **Description:** A pipeline demonstrating the effective use of transfer learning by fine-tuning the Zoobot **ConvNeXt** model on the GalaxyMNIST dataset. The project validated the critical need for GPU acceleration and achieved $\mathbf{88.85\%}$ classification accuracy, with systematic error analysis revealing structural ambiguities between 'smooth_cigar' and 'edge_on_disk' galaxy classes.
 
 ## 🤝 AI Assistance Acknowledgement
@@ -55,12 +48,8 @@ Gemini's assistance was instrumental in accelerating the most specialized and ar
 * **Validation Strategy:** Advising on the implementation of a train/validation data splitting (torch.utils.data.random_split) and the associated validation loop to ensure accurate model performance tracking.
 * **Analysis Plots Streamlining for Zoobot project:** Streamlined the conversion of raw prediction data into advanced, interpretable visualizations (e.g., Residual Distribution Plot Per Class and Per-Class Accuracy Chart) and advised on aesthetic choices for professional presentation of the visualizations.
 
-### 3. Data Engineering & ETL Pipelines
-* **Script Synthesis and Optimization:** Providing architectural guidance to synthesize multiple scraping scripts into a scalable, hierarchical two-step ETL process for the Shanghai scraping project.
-
 ### 3. Documentation & Review
 * Ensuring project compliance with professional best practices (e.g., `.gitignore`, `requirements.txt`).
-
 
 The repository owner maintained full control over **final code implementation, hyperparameter tuning, validation, and architectural decisions** across all projects.
 
